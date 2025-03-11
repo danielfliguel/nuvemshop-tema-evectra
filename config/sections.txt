@@ -1,0 +1,15 @@
+primary
+	name = Destacados
+	description = Los productos aparecen destacados en la página de inicio (hasta 40 productos).
+new
+	name = Novedades
+	description = Los productos aparecen como nuevos en la página de inicio (hasta 40 productos).
+sale
+	name = Ofertas
+	description = Los productos aparecen en oferta en la página de inicio (hasta 40 productos).
+extra1
+	name = Extra 1
+	description = Sección de productos adicionales en la página de inicio (hasta 40 productos).
+extra2
+	name = Extra 2
+	description = Sección de productos adicionales en la página de inicio (hasta 40 productos).
