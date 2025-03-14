@@ -1,7 +1,7 @@
 {% set newsletter_contact_error = contact.type == 'newsletter' and not contact.success %}
 
 {% if settings.news_show %}
-    <section class="section-newsletter-home bg-primary" data-store="home-newsletter">
+    <section class="section-newsletter-home bg-text" data-store="home-newsletter">
         <div class="container">
             <div class="d-flex mx-lg-auto">
                 <div class="col-md-2 col-3 d-flex flex-column justify-content-center">
@@ -13,7 +13,7 @@
                             <h2 class="news-title title-medium mb-2">{{ settings.news_title }}</h2>
                         {% endif %}
                         {% if settings.news_text %}
-                            <p class="font-weight-semi-bold text-medium mb-0">{{ settings.news_text | raw }}</p>
+                            <p class="text-medium mb-0">{{ settings.news_text | raw }}</p>
                         {% endif %}
                     
                         {% if contact and contact.type == 'newsletter' %}
@@ -42,7 +42,7 @@
                         <input type="hidden" name="name" value="{{ "Sin nombre" | translate }}" />
                         <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
                         <input type="hidden" name="type" value="newsletter" />
-                        <input type="submit" name="contact" class="btn bg-buy form-control-big newsletter-btn text-white font-weight-bold" value="{{ "Enviar" | translate }}" />
+                        <input type="submit" name="contact" class="btn bg-primary form-control-big newsletter-btn text-white font-weight-bold" value="{{ "Enviar" | translate }}" />
                         </div>
                     </form>
                 </div>

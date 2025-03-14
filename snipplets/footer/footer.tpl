@@ -66,7 +66,7 @@
 						{% endif %}
 						{% include "snipplets/contact-links.tpl" %}
 						{% if store.whatsapp %}
-							<a href="{{ store.whatsapp }}" target="_blank" class="bg-secondary font-weight-bold form-control-big text-uppercase d-block mt-3 w-fit-content text-small text-primary border-radius-8">{{ "Hable con nosotros" | translate }}</a>
+							<a href="{{ store.whatsapp }}" target="_blank" class="bg-primary text-text font-weight-bold form-control-big text-uppercase d-block mt-3 w-fit-content text-small text-primary border-radius-8">{{ "Hable con nosotros" | translate }}</a>
 						{% endif %}
 					</div>
 				{% endif %}
@@ -113,13 +113,13 @@
 
 					{# Social icons that work as examples #}
 					<a class="social-icon">
-						<svg class="icon-inline icon-lg icon-primary"><use xlink:href="#facebook-f"/></svg>
+						<svg class="icon-inline icon-lg"><use xlink:href="#facebook-f"/></svg>
 					</a>
 					<a class="social-icon">
-						<svg class="icon-inline icon-lg icon-primary"><use xlink:href="#instagram"/></svg>
+						<svg class="icon-inline icon-lg"><use xlink:href="#instagram"/></svg>
 					</a>
 					<a class="social-icon">
-						<svg class="icon-inline icon-lg icon-primary"><use xlink:href="#twitter"/></svg>
+						<svg class="icon-inline icon-lg"><use xlink:href="#twitter"/></svg>
 			        </a>
 				</div>
 
@@ -180,16 +180,16 @@
 	<div class="footer-addresses bg-secondary py-5">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-9 offset-lg-3 text-center text-primary footer-text">{{ settings.footer_text | raw }}</div>
-				<div class="col-md-3">
-					<h4 class="text-medium font-weight-semi-bold">{{ "Nuestras direcciones" | translate }}</h4>
+				<div class="col-12 text-center footer-text"><p class="d-block mx-auto bg-primary text-text mb-0">{{ settings.footer_text | raw }}</p></div>
+				<div class="col-md-2 offset-md-3">
+					<h4 class="text-medium text-center font-weight-semi-bold">{{ "Nuestras direcciones" | translate }}</h4>
 				</div>
 				{% if settings.footer_address_1 %}
 					<div class="col-md-3 d-flex">
 						{% if settings.footer_address_1_url %}
 							<a class="d-flex w-100 gap-between-md" href="{{ settings.footer_address_1_url }}" target="_blank">
 						{% endif %}
-						<svg class="icon-inline icon-lg icon-w icon-primary"><use xlink:href="#map-marker-alt"/></svg>
+						<svg class="icon-inline icon-lg icon-w"><use xlink:href="#map-marker-alt"/></svg>
 						<p class="footer-address">{{ settings.footer_address_1 | raw }}</p>
 						{% if settings.footer_address_1_url %}
 							</a>
@@ -201,7 +201,7 @@
 						{% if settings.footer_address_2_url %}
 							<a class="d-flex w-100 gap-between-md" href="{{ settings.footer_address_2_url }}" target="_blank">
 						{% endif %}
-						<svg class="icon-inline icon-lg icon-w icon-primary"><use xlink:href="#map-marker-alt"/></svg>
+						<svg class="icon-inline icon-lg icon-w"><use xlink:href="#map-marker-alt"/></svg>
 						<p class="footer-address">{{ settings.footer_address_2 | raw }}</p>
 						{% if settings.footer_address_2_url %}
 							</a>
@@ -213,7 +213,7 @@
 						{% if settings.footer_address_3_url %}
 							<a class="d-flex w-100 gap-between-md" href="{{ settings.footer_address_3_url }}" target="_blank">
 						{% endif %}
-						<svg class="icon-inline icon-lg icon-w icon-primary"><use xlink:href="#map-marker-alt"/></svg>
+						<svg class="icon-inline icon-lg icon-w"><use xlink:href="#map-marker-alt"/></svg>
 						<p class="footer-address">{{ settings.footer_address_3 | raw }}</p>
 						{% if settings.footer_address_3_url %}
 							</a>

@@ -12,10 +12,6 @@ $white: #ffffff;
     list-style: none!important;
 }
 
-.bg-primary{
-    background: $primary!important;
-}
-
 .bg-text{
     background: $text!important;
 }
@@ -46,6 +42,10 @@ $white: #ffffff;
 
 .text-bg{
     color: $background!important;
+}
+
+.text-text{
+    color: $text!important
 }
 
 .icon-bg{
@@ -85,11 +85,11 @@ $white: #ffffff;
 }
 
 .title-medium{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .gap-between{
-    gap: 7px;
+    gap: 5px;
 }
 
 .gap-between-md{
@@ -226,13 +226,11 @@ border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .icon-grid{
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .item-actions{
-    gap: 5px;
     .btn{
-        gap: 5px;
         padding: 8px 10px!important;
         font-size: 15px;
     }
@@ -269,8 +267,9 @@ border: 1px solid rgba(0, 0, 0, 0.10);
 
 {# /** Newsletter */ #}
 
-.newsletter-btn{
+.newsletter-btn.form-control-big{
     font-size: 15px;
+    padding: 13px 45px;
 }
 
 {# /** Footer */ #}
@@ -286,11 +285,14 @@ footer{
 }
 
 .footer-text{
-   background: #FEF12D;
-   border-radius: 11px;
-   padding: 10px 40px;
-   font-size: 16px;
-   margin-bottom: 45px;
+    margin-bottom: 45px;
+}
+
+.footer-text p{
+    border-radius: 11px;
+    padding: 10px 40px;
+    font-size: 16px;    
+    max-width: 800px;   
 }
 
 {# /** Product page */ #}

@@ -81,7 +81,7 @@
         </div>
         <div class="item-description py-4{% if settings.theme_rounded %} px-3{% else %} px-1{% endif %}" data-store="product-item-info-{{ product.id }}">
             <a href="{{ product_url_with_selected_variant }}" title="{{ product.name }}" aria-label="{{ product.name }}" class="item-link">
-                <div class="js-item-name item-name mb-3 font-weight-bold" data-store="product-item-name-{{ product.id }}">{{ product.name }}</div>
+                <div class="js-item-name item-name mb-3 font-weight-semi-bold" data-store="product-item-name-{{ product.id }}">{{ product.name }}</div>
                 {% if product.display_price %}
                     <div class="item-price-container mb-1" data-store="product-item-price-{{ product.id }}">
                         <span class="js-compare-price-display price-compare" {% if not product.compare_at_price or not product.display_price %}style="display:none;"{% else %}style="display:inline-block;"{% endif %}>
@@ -99,12 +99,12 @@
             {% endif %}
         </div>
         {% if settings.quick_shop %}
-            <div class="item-actions d-flex justify-content-center{% if settings.theme_rounded %} m-0 mb-3{% endif %}">
+            <div class="item-actions gap-between d-flex justify-content-center{% if settings.theme_rounded %} m-0 mb-3{% endif %}">
                 
                 {% if product.available and product.weight > 0 %}
-                    <div class="col-md-auto col-12 p-0">
+                    <div class="col-md-6 col-12 p-0">
                         {% if product.variations %}
-                            <a href="#" class="js-item-buy-open item-buy-open border-none d-flex align-items-center justify-content-md-between justify-content-center btn border-radius-8 btn-secondary btn-small bg-buy" title="{{ 'Compra rápida de' | translate }} {{ product.name }}" aria-label="{{ 'Compra rápida de' | translate }} {{ product.name }}" data-component="product-list-item.add-to-cart" data-component-value="{{product.id}}">
+                            <a href="#" class="js-item-buy-open item-buy-open border-none d-flex align-items-center gap-between-md justify-content-center btn border-radius-8 btn-secondary btn-small bg-buy" title="{{ 'Compra rápida de' | translate }} {{ product.name }}" aria-label="{{ 'Compra rápida de' | translate }} {{ product.name }}" data-component="product-list-item.add-to-cart" data-component-value="{{product.id}}">
                                 <svg class="icon-inline icon-grid icon-white"><use xlink:href="#bag"/></svg>
                                 <span class="text-white font-weight-bold">{{ 'Comprar' | translate }}</span>
                             </a>
@@ -115,7 +115,7 @@
                                 {% set texts = {'cart': "Comprar", 'contact': "Consultar precio", 'nostock': "Sin stock", 'catalog': "Consultar"} %}
 
                                 {% if product.weight > 0 and settings.quote %}
-                                <button type="submit" class="js-addtocart js-prod-submit-form border-none d-flex align-items-center justify-content-md-between justify-content-center btn border-radius-8 btn-secondary btn-small bg-buy {{ state }}" {% if state == 'nostock' %}disabled{% endif %} data-component="product-list-item.add-to-cart" data-component-value="{{ product.id }}">
+                                <button type="submit" class="js-addtocart js-prod-submit-form border-none d-flex align-items-center gap-between-md justify-content-center btn border-radius-8 btn-secondary btn-small bg-buy {{ state }}" {% if state == 'nostock' %}disabled{% endif %} data-component="product-list-item.add-to-cart" data-component-value="{{ product.id }}">
                                     <svg class="icon-inline icon-grid icon-white"><use xlink:href="#bag"/></svg>
                                     <span class="text-white font-weight-bold">{{ texts[state] | translate }}</span>
                                 </button>
@@ -128,9 +128,9 @@
                         {% endif %}
                     </div>
                 {% endif %}
-                <div class="{% if product.available and product.display_price and product.weight > 0 %}col-md-auto col-12 p-0{% else %}col-12{% endif %}">
+                <div class="{% if product.available and product.display_price and product.weight > 0 %}col-md-6 col-12 p-0{% else %}col-12{% endif %}">
                     {% if settings.quote %}
-                    <a href="/contato/?product={{ product.id }}" aria-label="{{ product.name }}" class="d-flex align-items-center {% if product.weight > 0 %}justify-content-md-between justify-content-center{% else %}justify-content-center{% endif %} border-none btn border-radius-8 btn-secondary btn-small bg-primary">
+                    <a href="/contato/?product={{ product.id }}" aria-label="{{ product.name }}" class="d-flex align-items-center gap-between-md {% if product.weight > 0 %} justify-content-center{% else %}justify-content-center{% endif %} border-none btn border-radius-8 btn-secondary btn-small bg-text">
                         <svg class="icon-inline icon-grid icon-white"><use xlink:href="#calculator"/></svg>
                         <span class="text-white font-weight-bold">{{ "Presupuestar" | translate }}</span>
                     </a>

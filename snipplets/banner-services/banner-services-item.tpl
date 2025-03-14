@@ -8,8 +8,8 @@
                 {% include "snipplets/svg/icons-adbar-and-banner-services-path.tpl" with {'item' : banner_services_icon, 'custom_class': 'icon-xl icon-primary'} %}
             </div>
             <div class="w-fit-content">
-                <h3 class="h5 m-0 text-primary">{{ banner_services_title }}</h3>
-                <p class="m-0 text-primary">{{ banner_services_description }}</p>
+                <h3 class="h5 m-0">{{ banner_services_title }}</h3>
+                <p class="m-0">{{ banner_services_description }}</p>
             </div>
         </div>
         {% if banner_services_url %}

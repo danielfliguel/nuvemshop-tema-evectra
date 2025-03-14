@@ -158,7 +158,7 @@ $body-font: {{ settings.font_rest | raw }};
 
 .bg-primary{
   background-color: $primary-color!important;
-  color: $main-background!important;
+  color: $main-background;
   a{
     color: $main-background!important;
   }
@@ -425,7 +425,6 @@ h6,.h6{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  text-transform: uppercase;
   white-space: normal;
   background: none;
   @include prefix(transition, all 0.4s ease, webkit ms moz o);
@@ -1223,7 +1222,7 @@ input::-webkit-outer-spin-button{
     color: $main-foreground;
   }
   &-price {
-    color: $primary-color;
+    color: #581200;
   }
   &-buy-variants {
     background: rgba($main-background, .9);

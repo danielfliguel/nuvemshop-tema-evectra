@@ -913,12 +913,6 @@ DOMContentLoaded.addEventOrExecute(() => {
                     breakpoints: {
                         768: {
                             slidesPerView: 3,
-                        },
-                        1300: {
-                            slidesPerView: 4,
-                        },
-                        1650: {
-                            slidesPerView: 5,
                         }
                     }
                 });
