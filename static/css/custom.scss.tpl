@@ -295,6 +295,26 @@ footer{
     max-width: 800px;   
 }
 
+.footer-addresses,
+.footer-legal{
+    border-top: 1px solid;
+}
+
+.footer-legal-message{
+    color: #565250;
+}
+
+{# /** Category Page */ #}
+#filters{
+    border: 1px solid #565250;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.filter-group{
+    border-bottom: 1px solid #565250;
+}
+
 {# /** Product page */ #}
 
 .form-control.js-shipping-input.form-control-inline{
@@ -528,14 +548,6 @@ input[type=number] {
         --container: 1300px;
         --difference: calc(var(--window) - var(--container));
         margin-right: calc(var(--difference) / 2);
-    }
-}
-
-@media (min-width: 1400px){
-    .category-body .js-item-product{
-        -ms-flex: 0 0 25%!important;
-        flex: 0 0 25%!important;
-        max-width: 25%!important;
     }
 }
 

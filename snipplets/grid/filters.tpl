@@ -53,8 +53,8 @@
 
                 {% else %}
                     {% if product_filter.has_products %}
-                        <div class="mb-5" data-store="filters-group" data-component="list.filter-{{ product_filter.type }}" data-component-value="{{ product_filter.key }}">
-                            <div class="mb-3 mt-4 {% if mobile %}h5{% else %}h6{% endif %}">{{product_filter.name}}</div>
+                        <div class="py-2 filter-group" data-store="filters-group" data-component="list.filter-{{ product_filter.type }}" data-component-value="{{ product_filter.key }}">
+                            <div class="my-3 {% if mobile %}h5{% else %}h6{% endif %}">{{product_filter.name}}</div>
                             {% set index = 0 %}
                             {% for value in product_filter.values %}
                                 {% set hidden_items_threshold = product_filter.values_with_products > 8 %}

@@ -17,7 +17,16 @@
 			{% if template != 'password' %}
 
 				<div class="col-lg col-md-6 mb-4">
-					{{ component('logos/logo', {logo_img_classes: 'transition-soft mb-5', logo_text_classes: 'h5 h3-md mb-0'}) }}
+					{% if "footer_logo.png" | has_custom_image %}
+						{% set footer_logo = 'footer_logo.png' | static_url %}
+						{% if settings.footer_logo_url != '' %}
+							<a href="{{ settings.footer_logo_url | setting_url }}">
+						{% endif %}
+						<img src="{{ 'images/empty-placeholder.png' | static_url }}" data-src="{{ footer_logo }}" class="logo-footer lazyload" alt="{{ 'Sello de' | translate }} {{ store.name }}" />
+						{% if settings.footer_logo_url != '' %}
+							</a>
+						{% endif %}
+					{% endif %}
 					{% if has_shipping_logos %}
 						<h4 class="text-medium font-weight-semi-bold mb-1">{{ "Medios de envío" | translate }}</h4>
 						{% include "snipplets/logos-icons.tpl" with {'shipping': true} %}
@@ -131,9 +140,7 @@
 
 			{% if has_shipping_payment_logos or has_seal_logos %}
 
-				<div class="divider mb-5"></div>
-
-				<div class="row element-footer">
+				<div class="row element-footer mb-0">
 
 					{# Logos Payments and Shipping #}
 			 		{% if has_shipping_payment_logos %}
@@ -223,7 +230,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="js-footer-legal footer-legal py-3">
+	<div class="js-footer-legal footer-legal pt-2">
+		{% if settings.footer_legal_text %}
+			<div class="footer-legal-message text-center mb-4"><p>{{ settings.footer_legal_text }}</div>
+		{% endif %}
 		<div class="container-fluid px-md-5">
 			<div class="row">
 

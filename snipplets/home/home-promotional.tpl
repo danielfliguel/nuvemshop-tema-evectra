@@ -1,4 +1,4 @@
-<section class="section-banners-home bg-text py-5" data-store="home-banner-promotional">
+<section class="section-banners-home bg-text py-4" data-store="home-banner-promotional">
     <div class="container{% if settings.banner_promotional_full %}-fluid{% endif %}">
         <div class="row">
             {% set num_banners = 0 %}

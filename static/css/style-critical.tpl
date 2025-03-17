@@ -502,7 +502,7 @@ a {
 }
 
 .social-icon {
-  padding: 0 7px;
+  padding-right: 7px;
 }
 
 {# /* // Titles and breadcrumbs */ #}

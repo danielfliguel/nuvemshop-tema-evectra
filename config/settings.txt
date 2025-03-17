@@ -1092,6 +1092,17 @@ Pie de página
 		icon = arrow-down
 		advanced = true
 	title
+		title = Logo do rodapé
+	description
+		description = Faça upload do logo do rodapé
+	image
+		title = Logo do rodapé
+		original = footer_logo.png
+		width = 215
+		height = 85
+		url = footer_logo_url
+		url_description = [Opcional] Página web externa a la que llevará la imagen del sello al hacer clic
+	title
 		title = Colores
 	checkbox
 		name = footer_colors
@@ -1131,9 +1142,14 @@ Pie de página
 		name = footer_menu_title
 		description = Título
 	title
-		title = Texto del pie de página.
+		title = Texto destaque do rodapé
 	i18n_input
 		name = footer_text
+		description = Texto
+	title
+		title = Texto do final do rodapé.
+	i18n_input
+		name = footer_legal_text
 		description = Texto
 	title
 		title = Imágenes del primer menú del pie de página.
