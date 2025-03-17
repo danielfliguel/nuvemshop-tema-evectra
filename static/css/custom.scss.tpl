@@ -484,6 +484,24 @@ input[type=number] {
     .form-quantity-container{
         max-width: 65%;
     }
+
+    .item-actions{
+        .btn{
+            font-size: 12px;
+        }
+    }
+
+    .gap-between-md{
+        gap: 10px;
+    }
+
+    .swiper-button-prev{
+        left: 0;
+    }
+
+    .swiper-button-next{
+        right: 0;
+    }
 }
 
 @media (min-width: 992px){

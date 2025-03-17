@@ -106,6 +106,7 @@ critical-css.tpl
 body{
   margin: 0;
   font-size: 15px;
+  padding-top: 0!important
 }
 
 {# /* // Placeholders and preloaders */ #}
@@ -1582,7 +1583,7 @@ p{
   {# /* //// Header and nav */ #}
 
   .head-fix {
-    position: fixed;
+    position: sticky;
   }
 
   .logo-img{

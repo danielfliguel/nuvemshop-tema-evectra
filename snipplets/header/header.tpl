@@ -115,7 +115,7 @@
             {% endif %}
 
             {# Mobile row for exposed categories #}
-            <div class="row align-items-center {% if settings.head_utility == 'searchbox' %}d-none d-md-block{% endif %}">
+            <div class="row align-items-center {% if settings.head_utility == 'searchbox' %}d-none d-lg-block{% endif %}">
                 {% if settings.head_utility == 'categories' %}
 
                     {# Menu icon inline with categories when when categories are exposed and logo is centered #}
