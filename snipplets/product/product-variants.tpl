@@ -1,8 +1,8 @@
-<div class="js-product-variants {% if quickshop %}js-product-quickshop-variants{% endif %} form-row mb-2">
+<div class="js-product-variants {% if quickshop %}js-product-quickshop-variants{% endif %} form-row mx-0 px-3 bg-white">
 	{% set has_size_variations = false %}
 	{% for variation in product.variations %}
 
-		<div class="js-product-variants-group {% if variation.name in ['Color', 'Cor'] %}js-color-variants-container{% endif %} {% if quickshop %}col-12 {% else %} col-12 {% if loop.length == 3 %} col-md-4 {% else %} col-md-6{% endif %}{% endif %}">
+		<div class="js-product-variants-group {% if variation.name in ['Color', 'Cor'] %}js-color-variants-container{% endif %} {% if quickshop %}col-12 {% else %} col-12 {% if loop.length == 3 %} col-md-4 {% else %} col-md-6{% endif %}{% endif %} p-0">
 			{% if quickshop %}
 				{% embed "snipplets/forms/form-select.tpl" with{select_label: true, select_label_name: '' ~ variation.name ~ '', select_for: 'variation_' ~ loop.index , select_id: 'variation_' ~ loop.index, select_name: 'variation' ~ '[' ~ variation.id ~ ']', select_group_custom_class: 'form-group-small mb-2', select_custom_class: 'js-variation-option js-refresh-installment-data form-control-small', select_label_custom_class:'mb-1'} %}
 					{% block select_options %}

@@ -35,7 +35,7 @@
 {% if product_detail %}
 <div class="row">
 {% endif %}
-<div class="mb-2 col-12" data-store="shipping-calculator">
+<div class="mb-4 col-12" data-store="shipping-calculator">
 
 	<div class="js-shipping-calculator-head bg-white p-3 shipping-calculator-head position-relative transition-soft {% if cart_zipcode %}with-zip{% else %}with-form{% endif %} {% if free_shipping_messages_visible %}with-free-shipping{% endif %}">
 		<div class="js-shipping-calculator-with-zipcode {% if cart_zipcode %}js-cart-saved-zipcode transition-up-active{% endif %} w-100 transition-up">
@@ -112,7 +112,7 @@
 								
 								{# Shipping default label #}
 
-								<span class="{% if free_shipping_minimum_label_changes_visibility %}js-shipping-calculator-label-default{% endif %} text-medium font-weight-bold text-uppercase" {% if (product_detail and free_shipping_messages_visible) or (cart.free_shipping.min_price_free_shipping.min_price_raw == 0 and has_free_shipping) %}style="display: none;"{% endif %}>
+								<span class="{% if free_shipping_minimum_label_changes_visibility %}js-shipping-calculator-label-default{% endif %} font-body font-weight-medium text-uppercase" {% if (product_detail and free_shipping_messages_visible) or (cart.free_shipping.min_price_free_shipping.min_price_raw == 0 and has_free_shipping) %}style="display: none;"{% endif %}>
 
 									{# Regular shipping calculator label #}
 									
@@ -123,7 +123,7 @@
 				{% endblock input_prepend_content %}
 				{% block input_append_content %}
 				<div class="col-6 col-lg-2 pr-0">
-					<button class="js-calculate-shipping bg-primary text-white text-medium font-weight-bold btn btn-secondary btn-block" aria-label="{{ 'Calcular envío:' | translate }}">	
+					<button class="js-calculate-shipping bg-text text-white text-medium font-weight-bold btn btn-block" aria-label="{{ 'Calcular envío:' | translate }}">	
 						<span class="js-calculate-shipping-wording">{{ "Calcular" | translate }}</span>
 						<span class="js-calculating-shipping-wording" style="display: none;">{{ "Calculando" | translate }}</span>
 						<span class="float-right loading" style="display: none;">
@@ -143,7 +143,7 @@
 							<a data-toggle="#quick-login" class="js-product-quick-login js-modal-open font-small text-primary mt-2 mb-2 d-block" href="#">{{ '<strong>Iniciá sesión</strong> y usá tus datos de entrega' | translate }}</a>
 						{% endif %}
 
-						<a class="font-small text-primary mt-2 mb-2 d-block {% if product_detail %} js-shipping-zipcode-help {% endif %}" href="{% if store.country == 'AR' %}{{ zipcode_help_ar }}{% elseif store.country == 'BR' %}{{ zipcode_help_br }}{% elseif store.country == 'MX' %}{{ zipcode_help_mx }}{% endif %}" target="_blank">{{ "No sé mi código postal" | translate }}</a>
+						<a class="font-small mt-2 mb-2 d-block {% if product_detail %} js-shipping-zipcode-help {% endif %}" href="{% if store.country == 'AR' %}{{ zipcode_help_ar }}{% elseif store.country == 'BR' %}{{ zipcode_help_br }}{% elseif store.country == 'MX' %}{{ zipcode_help_mx }}{% endif %}" target="_blank">{{ "No sé mi código postal" | translate }}</a>
 					</div>
 				{% endif %}
 				<div class="col-12">

@@ -45,8 +45,8 @@
         <div class="row">
             {% if settings.products_related_title %}
                 <div class="col-12 mb-3 text-center d-flex gap-between-md align-items-center justify-content-center">
-                    <svg class="icon-inline icon-lg svg-icon-primary"><use xlink:href="#star"/></svg>
-                    <h3 class="mb-0 h2 text-primary text-uppercase">{{ settings.products_related_title }}</h3>
+                    <svg class="icon-inline icon-lg"><use xlink:href="#star"/></svg>
+                    <h3 class="mb-0 title-medium">{{ settings.products_related_title }}</h3>
                 </div>
             {% endif %}
             {% if related_slider %}
@@ -63,22 +63,23 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="js-swiper-related-prev swiper-button-prev d-none d-md-flex align-items-center justify-content-center svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %} border-none bg-white">
-            <!--<svg class="icon-inline icon-2x mr-1 icon-flip-horizontal"><use xlink:href="#chevron"/></svg>-->
-            <svg width="18" height="27" viewBox="0 0 18 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5966 3.35029L4.46809 13.3722C4.46809 13.3722 6.83986 15.744 8.35959 17.2637C10.7953 19.6994 14.5966 23.5008 14.5966 23.5008" stroke="#04065A" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-        </div>
-        <div class="js-swiper-related-next swiper-button-next d-none d-md-flex align-items-center justify-content-center svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %} border-none bg-white">
-            <!--<svg class="icon-inline icon-2x ml-1"><use xlink:href="#chevron"/></svg>-->
-            <svg width="18" height="27" viewBox="0 0 18 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.40337 23.6497L13.5319 13.6278C13.5319 13.6278 11.1601 11.256 9.64041 9.73628C7.20469 7.30056 3.40336 3.49922 3.40336 3.49922" stroke="#04065A" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-        </div>
+        
     </div>
 {% endif %}
 {% if related_slider %}
             </div>
+        </div>
+        <div class="js-swiper-related-prev swiper-button-prev d-none d-md-flex align-items-center justify-content-center svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %} border-none bg-white">
+            <!--<svg class="icon-inline icon-2x mr-1 icon-flip-horizontal"><use xlink:href="#chevron"/></svg>-->
+            <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.95418 2.95418L3.46797 9.37211C3.46797 9.37211 4.98683 10.891 5.96004 11.8642C7.51985 13.424 9.95418 15.8583 9.95418 15.8583" stroke="#E6643A" stroke-width="4" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="js-swiper-related-next swiper-button-next d-none d-md-flex align-items-center justify-content-center svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %} border-none bg-white">
+            <!--<svg class="icon-inline icon-2x ml-1"><use xlink:href="#chevron"/></svg>-->
+            <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.04582 16.0458L9.53203 9.62789C9.53203 9.62789 8.01317 8.10904 7.03996 7.13582C5.48015 5.57601 3.04582 3.14168 3.04582 3.14168" stroke="#E6643A" stroke-width="4" stroke-linecap="square"/>
+            </svg>
         </div>
     </div>
 {% endif %}

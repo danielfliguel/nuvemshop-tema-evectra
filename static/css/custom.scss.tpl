@@ -2,6 +2,7 @@
 $text: {{ settings.text_color }};
 $primary: {{ settings.primary_color }};
 $secondary: {{ settings.secondary_color }};
+$price: {{ settings.price_color }};
 $buy: {{ settings.buy_color }};
 $background: {{ settings.background_color }};
 $white: #ffffff;
@@ -73,7 +74,7 @@ $white: #ffffff;
 }
 
 .bg-product-form-grey{
-    background: #E4E4E4!important;
+    background: #F8F8F8!important;
 }
 
 .text-small{
@@ -118,6 +119,10 @@ $white: #ffffff;
 
 .border-none{
     border: none!important;
+}
+
+.border-radius-4{
+    border-radius: 4px!important;
 }
 
 .border-radius-8{
@@ -202,23 +207,10 @@ header{
     margin-bottom: 40px;
 }
 
-.js-product-container{
-border: 1px solid rgba(0, 0, 0, 0.10);
-
-}
-
 .section-featured-home{
     .swiper-button-prev, .swiper-button-next{
         filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
     }
-}
-
-.home-with-side-menu .swiper-button-prev, .js-swiper-related-prev{
-    left: -5px;
-}
-
-.home-with-side-menu .swiper-button-next, .js-swiper-related-next{
-    right: -5px;
 }
 
 .js-product-container{
@@ -226,7 +218,7 @@ border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .icon-grid{
-    font-size: 15px;
+    font-size: 21px;
 }
 
 .item-actions{
@@ -337,14 +329,25 @@ input[type=number] {
     font-size: 15px;
 }
 
-.js-calculate-shipping.btn.btn-secondary.btn-block{
+.js-calculate-shipping.btn.btn-block{
     border-radius: 5px;
+    padding: 12px;
+}
+
+.js-product-variants-group .form-label{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .form-quantity-icon.btn{
-    width: 30px;
+    width: 21px;
     height: 30px;
     z-index: 1;
+}
+
+.form-quantity-label{
+    color: #565250;
 }
 
 .js-quantity-input{
@@ -355,16 +358,13 @@ input[type=number] {
     margin: 0 -10px;
 }
 
+.js-quantity-up.btn,
 .js-quantity-down.btn{
-    background: #D9D9D9;
-}
-
-.js-quantity-up.btn{
-    background: $text;
+    background: #565250;
 }
 
 .form-quantity-icon svg{
-    width: 9px;
+    width: 8px;
 }
 
 .form-quantity-container{
@@ -374,6 +374,10 @@ input[type=number] {
 .price-and-quantity-container{
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
+}
+
+#price_display{
+    color: $price;
 }
 
 .cloud-zoom-big {

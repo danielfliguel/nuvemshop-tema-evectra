@@ -236,9 +236,9 @@ DOMContentLoaded.addEventOrExecute(() => {
 
         let footerOffset = 20;
 
-        if (window.innerWidth > 768) {
+        /*if (window.innerWidth > 768) {
             footerOffset = 60;
-        }
+        }*/
 
         {% if store.whatsapp %}
             footerLegal.css("paddingBottom", footerOffset + "px");
@@ -1072,16 +1072,6 @@ DOMContentLoaded.addEventOrExecute(() => {
 	{% endif %}
 
     {% if template == 'product' %}
-
-        {# /* // Product Image Zoom */ #}
-        
-        //Disables zoom on hover for mobile
-        
-        {% if settings.product_image_zoom %}
-            if (window.innerWidth < 992) {
-                jQueryNuvem('.product-url-wrapper').removeClass('js-desktop-zoom cloud-zoom').addClass('js-product-slide-link d-block p-relative');
-            }
-        {% endif %}
 
         {# /* // Product Related */ #}
 

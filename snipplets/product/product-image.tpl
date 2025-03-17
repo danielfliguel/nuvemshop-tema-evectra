@@ -32,8 +32,8 @@
 				{% include 'snipplets/labels.tpl' with {'product_detail': true} %}
 			    <div class="swiper-wrapper">
 			    	{% for image in product.images %}
-			         <div class="swiper-slide js-product-slide slider-slide {% if settings.product_image_zoom %}desktop-zoom-container{% endif %}" data-image="{{image.id}}" data-image-position="{{loop.index0}} {% if settings.product_image_zoom %}data-zoom-url="{{ image | product_image_url('original') }}{% endif %}">
-						<a href="{{ image | product_image_url('original') }}" class="{% if settings.product_image_zoom %}js-desktop-zoom cloud-zoom{% else %}js-product-slide-link d-block p-relative{% endif %} product-url-wrapper" data-fancybox="product-gallery" rel="position: 'inside', showTitle: false, loading: '{{ 'Cargando...' | translate }}'" style="padding-bottom: {{ image.dimensions['height'] / image.dimensions['width'] * 100}}%;">
+			         <div class="swiper-slide js-product-slide slider-slide" data-image="{{image.id}}" data-image-position="{{loop.index0}}">
+						<a href="{{ image | product_image_url('original') }}" class="js-product-slide-link d-block p-relative product-url-wrapper" data-fancybox="product-gallery" rel="position: 'inside', showTitle: false, loading: '{{ 'Cargando...' | translate }}'" style="padding-bottom: {{ image.dimensions['height'] / image.dimensions['width'] * 100}}%;">
 		         			<img src="{{ 'images/empty-placeholder.png' | static_url }}" data-srcset='{{  image | product_image_url('large') }} 480w, {{  image | product_image_url('huge') }} 640w, {{  image | product_image_url('original') }} 1024w' data-sizes="auto" class="js-product-slide-img product-slider-image img-absolute img-absolute-centered lazyautosizes lazyload{% if settings.theme_rounded %} box-rounded{% endif %}" {% if image.alt %}alt="{{image.alt}}"{% endif %} />
 		         			<img src="{{ image | product_image_url('tiny') }}" class="js-product-slide-img product-slider-image img-absolute img-absolute-centered blur-up" {% if image.alt %}alt="{{image.alt}}"{% endif %} />
 			        	</a>

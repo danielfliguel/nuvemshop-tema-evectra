@@ -11,7 +11,7 @@
 	   <h4 id="compare_price_display" class="js-compare-price-display mb-0 price-compare font-weight-normal {% if product_can_show_installments or (product.promotional_offer and not product.promotional_offer.script.is_percentage_off) %}mb-2{% endif %}" {% if not product.compare_at_price or not product.display_price %}style="display:none;"{% else %} style="display:block;"{% endif %}>{% if product.compare_at_price and product.display_price %}{{ product.compare_at_price | money }}{% endif %}</h4>
     </span>
     <span class="d-inline-block">
-    	<h2 class="js-price-display text-primary {% if product_can_show_installments or (product.promotional_offer and not product.promotional_offer.script.is_percentage_off) %}mb-2{% endif %}" id="price_display" {% if not product.display_price %}style="display:none;"{% endif %} data-product-price="{{ product.price }}">{% if product.display_price %}{{ product.price | money }}{% endif %}</h2>
+    	<h2 class="js-price-display {% if product_can_show_installments or (product.promotional_offer and not product.promotional_offer.script.is_percentage_off) %}mb-2{% endif %}" id="price_display" {% if not product.display_price %}style="display:none;"{% endif %} data-product-price="{{ product.price }}">{% if product.display_price %}{{ product.price | money }}{% endif %}</h2>
     </span>
 </div>
 
@@ -133,16 +133,16 @@
             {# Add to cart CTA #}
 
             {% if product.weight > 0 %}
-            <button type="submit" class="js-addtocart js-prod-submit-form btn btn-primary gap-between-md d-flex align-items-center justify-content-center bg-buy border-radius-10 btn-block mb-4 {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %} data-store="product-buy-button" data-component="product.add-to-cart">
+            <button type="submit" class="js-addtocart js-prod-submit-form btn btn-primary gap-between-md d-flex align-items-center justify-content-center bg-buy border-radius-4 btn-block mb-4 {{ state }}" value="{{ texts[state] | translate }}" {% if state == 'nostock' %}disabled{% endif %} data-store="product-buy-button" data-component="product.add-to-cart">
                 <svg class="icon-inline icon-grid icon-white"><use xlink:href="#bag"/></svg>
-                <span class="text-white font-weight-bold text-uppercase title-medium">{{ texts[state] | translate }}</span>
+                <span class="text-white font-weight-semi-bold text-uppercase text-medium">{{ texts[state] | translate }}</span>
             </button>
             {% endif %}
 
             {% if settings.quote %}
-                <a href="/contato/?product={{ product.id }}" aria-label="{{ product.name }}" class="product-page-quote-btn d-flex align-items-center {% if product.weight > 0 %}justify-content-between{% else %}justify-content-center gap-between{% endif %} border-none btn border-radius-8 btn-primary bg-primary">
+                <a href="/contato/?product={{ product.id }}" aria-label="{{ product.name }}" class="product-page-quote-btn d-flex align-items-center justify-content-center gap-between-md border-none btn border-radius-4 btn-primary bg-text">
                     <svg class="icon-inline icon-grid icon-white"><use xlink:href="#calculator"/></svg>
-                    <span class="text-white font-weight-bold title-medium">{{ "Solicitud de cotización" | translate }}</span>
+                    <span class="text-white font-weight-semi-bold text-medium text-uppercase">{{ "Solicitud de cotización" | translate }}</span>
                 </a>
             {% endif %}
 

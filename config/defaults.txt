@@ -1,5 +1,6 @@
 primary_color = #46459B
 secondary_color = #F7D1E6
+price_color = #581200;
 background_color = #ffffff
 buy_color = #ffffff
 text_color = #000000

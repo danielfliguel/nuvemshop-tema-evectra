@@ -79,6 +79,7 @@ style.scss.tpl
 $primary-color: {{ settings.primary_color }};
 $secondary-color: {{ settings.secondary_color }};
 $main-foreground: {{ settings.text_color }};
+$price: {{ settings.price_color }};
 $main-background: {{ settings.background_color }};
 {% if settings.footer_colors %}
   $footer-background: {{ settings.footer_background_color }};
@@ -1222,7 +1223,7 @@ input::-webkit-outer-spin-button{
     color: $main-foreground;
   }
   &-price {
-    color: #581200;
+    color: $price;
   }
   &-buy-variants {
     background: rgba($main-background, .9);

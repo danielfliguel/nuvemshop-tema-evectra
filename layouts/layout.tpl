@@ -156,7 +156,7 @@
 
         {% if template != 'home' or (template == 'home' and settings.slider is empty) %}
 
-        <div class="mt-4">
+        <div>
 
         {% endif %}
 

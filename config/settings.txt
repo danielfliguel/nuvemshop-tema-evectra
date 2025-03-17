@@ -22,6 +22,11 @@ Colores de tu marca
 		description = Color de acento
 	subtitle
 		subtitle = <div class='js-color-description'>Aplica a promociones y a mensajes de descuento, envío gratis y cuotas sin interés.</div>
+	color
+		name = price_color
+		description = Cor dos preços
+	subtitle
+		subtitle = Cor dos preços dos produtos
 	checkbox
 		name = accent_color_active
 		description = Usar color de acento
@@ -141,9 +146,6 @@ Encabezado
 			light = Color de fondo
 			dark = Color de textos
 			primary = Color principal
-	checkbox
-		name = home_side_navigation_menu
-		description = Menú de navegacíon lateral en la página de inicio
 	checkbox
 		name = head_fix
 		description = Encabezado siempre visible al navegar la tienda
@@ -954,11 +956,6 @@ Detalle de producto
 		description = Mostrar el calculador de costos de envío y locales físicos en la página de producto
 	subtitle
 		subtitle = <a target='_blank' href='/admin/shipping/'>Agregar medios de envío o locales físicos</a>
-	title
-		title = Zoom
-	checkbox
-		name = product_image_zoom
-		description = Ampliar la foto del producto al pasar el mouse
 	title
 		title = Información de cuotas
 	checkbox

@@ -1,7 +1,7 @@
 {# Product quantity #}
         
 <div class="col-lg-4 col-6 pl-md-0">
-    <span class="d-block mb-2 text-uppercase text-medium font-weight-bold">{{ "Cantidad:" | translate }}</span>
+    <span class="d-block mb-2 text-uppercase text-medium font-weight-bold form-quantity-label">{{ "Cantidad:" | translate }}</span>
     {% set form_quantity_class = settings.product_stock ? ' mb-2' : '' %}
 
     {% embed "snipplets/forms/form-input.tpl" with{
@@ -19,12 +19,12 @@
     input_aria_label: 'Cambiar cantidad' | translate } %}
         {% block input_prepend_content %}
         <div class="form-row m-0 align-items-center bg-product-form-grey" data-component="product.quantity">
-            <span class="js-quantity-down form-quantity-icon btn d-flex align-items-center justify-content-center border-radius-10" data-component="product.quantity.minus">
+            <span class="js-quantity-down form-quantity-icon icon-white btn d-flex align-items-center justify-content-center border-radius-4" data-component="product.quantity.minus">
                 <svg><use xlink:href="#minus"/></svg>
             </span>
         {% endblock input_prepend_content %}
         {% block input_append_content %}
-            <span class="js-quantity-up form-quantity-icon btn d-flex align-items-center justify-content-center border-radius-10" data-component="product.quantity.plus">
+            <span class="js-quantity-up form-quantity-icon btn d-flex align-items-center justify-content-center border-radius-4" data-component="product.quantity.plus">
                 <svg class="icon-white"><use xlink:href="#plus"/></svg>
             </span>
         </div>
