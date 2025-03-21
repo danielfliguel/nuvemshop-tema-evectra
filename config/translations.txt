@@ -101,6 +101,11 @@ pt "Aceitar"
 en "Accept"
 es_mx "Aceptar"
 
+es "Blog"
+pt "Blog"
+en "Blog"
+es_mx "Blog"
+
 es "Elegir"
 pt "Escolher"
 en "Choose"

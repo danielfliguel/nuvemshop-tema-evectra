@@ -1149,45 +1149,14 @@ Pie de página
 		name = footer_legal_text
 		description = Texto
 	title
-		title = Imágenes del primer menú del pie de página.
-	subtitle
-		subtitle = Inserte los iconos en el orden de los elementos del menú.
-	checkbox
-		name = footer_menu_icon_1_show
-		description = Ver icono 1
-	image
-		original = footer_menu_icon_1.png
-		title = Icono 1
-	checkbox
-		name = footer_menu_icon_2_show
-		description = Ver icono 2
-	image
-		original = footer_menu_icon_2.png
-		title = Icono 2
-	checkbox
-		name = footer_menu_icon_3_show
-		description = Ver icono 3
-	image
-		original = footer_menu_icon_3.png
-		title = Icono 3
-	checkbox
-		name = footer_menu_icon_4_show
-		description = Ver icono 4
-	image
-		original = footer_menu_icon_4.png
-		title = Icono 4
-	checkbox
-		name = footer_menu_icon_5_show
-		description = Ver icono 5
-	image
-		original = footer_menu_icon_5.png
-		title = Icono 5
-	checkbox
-		name = footer_menu_icon_6_show
-		description = Ver icono 6
-	image
-		original = footer_menu_icon_6.png
-		title = Icono 6
+		title = Ícones do menu do rodapé
+	gallery
+		name = footer_menu_icons
+		gallery_image = Agregar imagen
+		gallery_link = [Opcional] Página web a la que quieres que te lleve la imagen al hacer click
+		gallery_width = 160
+		gallery_height = 160
+		gallery_more_info = true
 	title
 		title = Menú secundario
 	checkbox
